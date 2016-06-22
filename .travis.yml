@@ -1,3 +1,6 @@
+
+sudo: false
+
 language: java
 jdk:
   - openjdk7
@@ -12,6 +15,6 @@ cache:
 branches:
     except:
         - gh-pages
-notifications:
-    email:
-        - hboutemy@apache.org
+#notifications:
+#    email:
+#        - hboutemy@apache.org
