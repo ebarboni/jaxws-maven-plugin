@@ -64,6 +64,9 @@
                             <goal>wsimport</goal>
                         </goals>
                         <configuration>
+                            <vmArgs><!-- necessary for JDK 8 -->
+                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                            </vmArgs>
                             <wsdlUrls>
                                 <wsdlUrl>http://www.ebi.ac.uk/webservices/chebi/2.0/webservice?wsdl</wsdlUrl>
                             </wsdlUrls>

@@ -48,6 +48,9 @@
                 <artifactId>jaxws-maven-plugin</artifactId>
                 <configuration>
                     <verbose>true</verbose>
+                    <vmArgs><!-- necessary for JDK 8 -->
+                        <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                    </vmArgs>
                 </configuration>
                 <executions>
                     <execution>

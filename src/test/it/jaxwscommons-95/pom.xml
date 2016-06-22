@@ -48,6 +48,11 @@
                         <goals>
                             <goal>wsimport</goal>
                         </goals>
+                        <configuration>
+                            <vmArgs><!-- necessary for JDK 8 -->
+                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                            </vmArgs>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

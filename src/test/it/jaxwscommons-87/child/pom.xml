@@ -45,6 +45,9 @@
                             <goal>wsimport</goal>
                         </goals>
                         <configuration>
+                            <vmArgs><!-- necessary for JDK 8 -->
+                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                            </vmArgs>
                             <wsdlDirectory>${basedir}/src/main/wsdl/</wsdlDirectory>
                             <bindingDirectory>${basedir}/src/main/bindings</bindingDirectory>
                         </configuration>

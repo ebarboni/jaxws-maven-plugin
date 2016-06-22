@@ -53,6 +53,9 @@
                     <verbose>true</verbose>
                     <!-- for JDK 6 compilation compatibility -->
                     <xnocompile>false</xnocompile>
+                    <vmArgs><!-- necessary for JDK 8 -->
+                        <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                    </vmArgs>
                 </configuration>
                 <executions>
                     <execution>
