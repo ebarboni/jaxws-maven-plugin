@@ -39,6 +39,11 @@
             <plugin>
                 <groupId>@project.groupId@</groupId>
                 <artifactId>jaxws-maven-plugin</artifactId>
+                <configuration>
+                    <vmArgs><!-- necessary for JDK 8 -->
+                        <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                    </vmArgs>
+                </configuration>
                 <executions>
                     <execution>
                         <id>id1</id>
